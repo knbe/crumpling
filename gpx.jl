@@ -11,7 +11,7 @@ vertexdata = readdlm(string(datadir, "vertexdata.csv"), ',', Float64)
 triangledata = readdlm(string(datadir, "triangledata.csv"), ',', Float64)
 faces = readdlm(string(datadir, "faces.txt"), ',', Int64)
 
-N = length(vtx_x)
+N = length(vertexdata[:,1])
 L = sqrt(N)
 N_TR = size(triangledata)[1]
 
