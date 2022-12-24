@@ -61,7 +61,9 @@ void initialise_pl_lattice(vector *vtxs, triangle *triangles) {
 		}
 		n++;
 	}
-	
+}
+
+void gen_sinusoidal_membrane(vector *vtxs, triangle *triangles) {
 }
 
 void update_triangles_coords(vector *vtxs, triangle *triangles) {
@@ -106,5 +108,4 @@ int main() {
 
 	update_triangles_coords(vtxs, triangles);
 	write_system_state(N, N_tr, vtxs, triangles);
-
 }
