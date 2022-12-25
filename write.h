@@ -4,6 +4,7 @@
 void initialize_output_files(int N, int L, int N_tr) {
 	FILE *vertexData = fopen("./data/vertexdata.csv", "w"); 
 	FILE *triangleData = fopen("./data/triangledata.csv", "w");
+	FILE *HData = fopen("./data/HData.csv", "w");
 
 	FILE *faceData = fopen("./data/faces.txt", "w");
 	int t = 1; 
@@ -23,6 +24,13 @@ void initialize_output_files(int N, int L, int N_tr) {
 	fclose(triangleData); 
 	//fclose(timeData); 
 	//fclose(metaData); 	
+}
+
+void write_H(int N_itr, int itr, double H) {
+	FILE *HData = fopen("./data/HData.csv", "a");
+	fprintf(HData, "%d, %f\n", itr, H);
+	fclose(HData);
+
 }
 
 void write_system_state(int N, int N_tr, vector *vtxs, triangle *triangles) {
